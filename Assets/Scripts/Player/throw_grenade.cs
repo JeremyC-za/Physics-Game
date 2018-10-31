@@ -10,8 +10,10 @@ public class throw_grenade : MonoBehaviour {
 
 	const int FORCE_MULTIPLIER = 5000;
 	const int PLAYER_SPEED_MULTIPLIER = 500;
-
+	// update method 
 	void Update () {
+		// check if our grenade key is being pressed down
+		// this will keep throwing grenades as long as the user is holding the key down
 		if (Input.GetKeyDown ("g")) {
 			GameObject spawned_grenade = Instantiate(grenade, launch_point.transform.position, Quaternion.identity);
 			Rigidbody grenade_rb = spawned_grenade.GetComponent<Rigidbody>();
